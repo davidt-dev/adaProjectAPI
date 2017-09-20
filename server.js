@@ -1,6 +1,6 @@
 const express = require('express');    //call express
 const app = express();                 //define app
-const port = process.env.PORT || 3000; //set port
+const port = process.env.PORT || 8080; //set port
 const mongoose = require('mongoose');
 
 const bodyParser = require('body-parser');
