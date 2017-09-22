@@ -15,4 +15,4 @@ const BakerSchema = new Schema({
 
 const Baker = mongoose.model('baker',BakerSchema);
 
-module.exports = Baker; 
+module.exports = Baker;
