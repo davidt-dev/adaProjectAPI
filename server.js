@@ -4,6 +4,7 @@ const port = process.env.PORT || 8080; //set port
 const mongoose = require('mongoose');
 const passport = require('passport');
 const flash    = require('connect-flash');
+var path = require('path');
 
 const morgan       = require('morgan');
 const cookieParser = require('cookie-parser');
@@ -38,6 +39,8 @@ app.use(cookieParser()); // read cookies (needed for auth)
 app.use(bodyParser.json()); // get information from html forms
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs'); // set up ejs for templating
 
 // required for passport
